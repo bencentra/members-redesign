@@ -1,0 +1,55 @@
+[
+  { 
+    "name": "Info", 
+    "links": [
+      { 
+        "name": "Wiki", 
+        "href": "https://wiki.csh.rit.edu", 
+        "icon": "wiki" 
+      },
+      { 
+        "name": "Member Profiles", 
+        "href": "https://members.csh.rit.edu/profiles", 
+        "icon": "profiles" 
+      },
+      { 
+        "name": "Event Calendar",
+        "dropdown": [
+          {
+            "name": "Calendar",
+            "href": "https://www.google.com/calendar/embed?src=rti648k5hv7j3ae3a3rum8potk%40group.calendar.google.com&ctz=America/New_York"
+          },
+          {
+            "name": "XML",
+            "href": "http://www.google.com/calendar/ical/rti648k5hv7j3ae3a3rum8potk%40group.calendar.google.com/public/basic"
+          },
+          {
+            "name": "iCal",
+            "href": "http://www.google.com/calendar/ical/rti648k5hv7j3ae3a3rum8potk%40group.calendar.google.com/public/basic.ics"
+          }
+        ],
+        "icon": "calendar"
+      },
+      {
+        "name": "Floor Map",
+        "href": "https://map.csh.rit.edu",
+        "icon": "floormap"
+      },
+      {
+        "name": "Constitution",
+        "href": "https://github.com/ComputerScienceHouse/Constitution",
+        "icon": "constitution"
+      },
+      {
+        "name": "Spending",
+        "href": "https://spending.csh.rit.edu",
+        "icon": "spending"
+      },
+      {
+        "name": "Sports",
+        "href": "https://sports.csh.rit.edu",
+        "icon": "sports"
+      }
+    ] 
+  }
+]
