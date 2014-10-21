@@ -40,6 +40,62 @@
 					{ name: "Eboard", day: "THU", time: "8:30" }
 				];
 
+        $scope.sections = [
+          { 
+            name: "Info", 
+            links: [
+              { 
+                name: "Wiki", 
+                href: "https://wiki.csh.rit.edu", 
+                icon: "wiki" 
+              },
+              { 
+                name: "Member Profiles", 
+                href: "https://members.csh.rit.edu/profiles", 
+                icon: "profiles" 
+              },
+              { 
+                name: "Event Calendar",
+                dropdown: [
+                  {
+                    name: "Calendar",
+                    href: "https://www.google.com/calendar/embed?src=rti648k5hv7j3ae3a3rum8potk%40group.calendar.google.com&ctz=America/New_York"
+                  },
+                  {
+                    name: "XML",
+                    href: "http://www.google.com/calendar/ical/rti648k5hv7j3ae3a3rum8potk%40group.calendar.google.com/public/basic"
+                  },
+                  {
+                    name: "iCal",
+                    href: "http://www.google.com/calendar/ical/rti648k5hv7j3ae3a3rum8potk%40group.calendar.google.com/public/basic.ics"
+                  }
+                ],
+                icon: "calendar"
+              },
+              {
+                name: "Floor Map",
+                href: "https://map.csh.rit.edu",
+                icon: "floormap"
+              },
+              {
+                name: "Constitution",
+                href: "https://github.com/ComputerScienceHouse/Constitution",
+                icon: "constitution"
+              },
+              {
+                name: "Spending",
+                href: "https://spending.csh.rit.edu",
+                icon: "spending"
+              },
+              {
+                name: "Sports",
+                href: "https://sports.csh.rit.edu",
+                icon: "sports"
+              }
+            ] 
+          }
+        ]
+
 			}]);
 
 	</script>
@@ -97,6 +153,24 @@
 			<!-- Links -->
 			<div class="col-md-9 col-sm-12">
 				<h3>The Links</h3>
+        <div class="row">
+          <div class="col-md-6 col-sm-6 col-xs-12" data-ng-repeat="section in sections">
+            <h4>{{ section.name }}</h4>
+            <div data-ng-repeat="link in section.links">
+              <div data-ng-show="link.href">
+                <p><a href="{{ link.href }}">{{ link.name }}</a></p>
+              </div>
+              <div data-ng-show="link.dropdown">
+                <p><a href="#">{{ link.name }}</a></p>
+                <ul>
+                  <li data-ng-repeat="sub in link.dropdown">
+                    <a href="{{ sub.href }}">{{ sub.name }}</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 			</div>
 		</div>
 	</div>
