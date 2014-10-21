@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html data-ng-app="members">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<title>CSH Members Portal</title>
+	<!-- Styles -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<style>
+		body {
+			padding-top: 70px;
+			padding-bottom: 20px;
+		}
+		.center {
+			text-align: center;
+		}
+	</style>
+	<!-- Scripts -->
+	<script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+	<script>
+			var app = angular.module("members", []);
+			
+			app.controller("MembersController", ['$scope', function($scope) {
+
+				$scope.meetings = [
+					{ name: "House", day: "SUN", time: "7:00" },
+					{ name: "Eval", day: "MON", time: "8:00" },
+					{ name: "OpComm", day: "MON", time: "9:00" },
+					{ name: "Financial", day: "TUE", time: "8:00" },
+					{ name: "History", day: "TUE", time: "8:30" },
+					{ name: "R&D", day: "WED", time: "8:00" },
+					{ name: "Imps", day: "WED", time: "8:30" },
+					{ name: "Social", day: "THU", time: "8:00" },
+					{ name: "Eboard", day: "THU", time: "8:30" }
+				];
+
+			}]);
+
+	</script>
+</head>
+<body data-ng-controller="MembersController">
+	<!-- Navbar -->
+	<div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Project name</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div><!-- /.nav-collapse -->
+    </div><!-- /.container -->
+  </div><!-- /.navbar -->
+	<!-- Content -->
+	<div class="container">
+		<div class="row">
+			<!-- Meeting Times -->
+			<div class="col-md-3 col-sm-12">
+				<div class="panel panel-default center">
+					<div class="panel-heading">
+						<div class="panel-title">
+							<strong>Meetings Times</strong>
+						</div>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-12 col-sm-4 col-xs-4" data-ng-repeat="meeting in meetings">
+								<div class="row">
+									<div class="col-md-6 col-sm-6 col-xs-12">
+										<p><strong>{{ meeting.name }}</strong></p>
+									</div>
+									<div class="col-md-6 col-sm-6 col-xs-12">
+										<p>{{ meeting.day }} {{ meeting.time }}</p>
+									</div>
+									<hr/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Links -->
+			<div class="col-md-9 col-sm-12">
+				<h3>The Links</h3>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
