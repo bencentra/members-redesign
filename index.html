@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html data-ng-app="members">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<title>CSH Members Portal</title>
+	<!-- Styles -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<style>
+		body {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+		.center {
+			text-align: center;
+		}
+	</style>
+	<!-- Scripts -->
+	<script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+	<script>
+
+      var app = angular.module("members", []);
+      
+      app.controller("MembersController", ['$scope', '$http', function($scope, $http) {
+
+        $scope.meetings = [];
+        $http.get("./meetings.json").success(function (response) {
+          $scope.meetings = response;
+        }).error(function (error) {
+          console.error("Error getting meetings.json");
+        });
+
+        $scope.sections = [];
+        $http.get("./links.json").success(function (response) {
+          $scope.sections = response;
+        }).error(function (error) {
+          console.error("Error getting links.json");
+        });
+
+      }]);
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+      jQuery(".dropdown").dropdown();
+
+    }, true);
+
+			
+
+	</script>
+</head>
+<body data-ng-controller="MembersController">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="jumbotron center">
+          <h1>CSH Members Portal Redesign</h1>
+          <p>Demos of various layouts for a rethinking of the CSH Members Portal.</p>
+          <br/>
+          <div class="row">
+            <div class="col-md-2 col-sm-3 col-xs-6">
+              <a href="index1.html"><button class="btn btn-default">Version 1</button></a>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-6">
+              <a href="index2.html"><button class="btn btn-default">Version 2</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
