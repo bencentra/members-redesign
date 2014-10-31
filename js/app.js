@@ -32,4 +32,6 @@ app.controller("MembersController", ['$scope', '$http', function($scope, $http) 
   }).error(function (error) {
     console.error("Error getting links.json");
   });
+  // Show icons
+  $scope.showIcons = true;
 }]);
