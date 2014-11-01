@@ -39,6 +39,7 @@ app.controller("MembersController", ['$scope', '$http', function($scope, $http) 
         }
       }
     }
+    if ($scope.popular.length == 0) $scope.popular = false;
   }).error(function (error) {
     console.error("Error getting links.json");
   });
