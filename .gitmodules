@@ -1,3 +1,6 @@
 [submodule "members-icons"]
 	path = members-icons
 	url = https://github.com/bencentra/members-icons
+[submodule "bootstrap-csh"]
+	path = bootstrap-csh
+	url = git@github.com:bencentra/bootstrap-csh.git

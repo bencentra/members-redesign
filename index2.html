@@ -9,7 +9,7 @@
 	<meta name="author" content="">
 	<title>CSH Members Portal</title>
 	<!-- Styles -->
-  <link rel="stylesheet" href="../bootstrap-csh/members/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="bootstrap-csh/members/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="./members-icons/css/members_icons.css">
 	<style>
 		body {
@@ -48,7 +48,7 @@
 	</style>
 	<!-- Scripts -->
 	<script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-	<script src="../bootstrap-csh/members/dist/js/bootstrap.js"></script>
+	<script src="bootstrap-csh/members/dist/js/bootstrap.js"></script>
 	<script src="//code.angularjs.org/snapshot/angular.min.js"></script>
 	<script src="js/app.js"></script>
 </head>
@@ -75,7 +75,7 @@
           </div>
           <div class="panel-body">
             <div class="row">
-              <div class="col-md-12" ng-hide="!popular">
+              <!--<div class="col-md-12" ng-hide="!popular">
                 <div class="well">
                   <h4 style="float: left;">Popular:</h4>
                   <ul class="nav nav-pills">
@@ -84,7 +84,7 @@
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div>-->
               <div class="col-md-12" data-ng-repeat="section in sections">
                 <h3>{{ section.name }}</h3>
                 <div class="row">
