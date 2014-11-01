@@ -1,0 +1,33 @@
+body {
+	padding-top: 76px;
+	padding-bottom: 20px;
+  background-color: #eee;
+  background-image: url('../img/background.png');
+  background-attachment: fixed;
+}
+.center {
+	text-align: center;
+}
+.icon-box > p {
+  margin-bottom: 20px;
+}
+.icon {
+  width: 64px;
+  height: 64px;
+  margin: auto;
+}
+.popular {
+  width: 36px;
+  height: 36px;
+  float: left;
+  position: relative;
+  left: 12px;
+  top: 3px;
+}
+.panel-heading {
+  border-bottom: 2px solid #df0051 !important;
+}
+#show-icons {
+  position: relative;
+  top: -10px;
+}
