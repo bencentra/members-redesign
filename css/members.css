@@ -24,9 +24,6 @@ body {
   left: 12px;
   top: 3px;
 }
-.panel-heading {
-  border-bottom: 2px solid #df0051 !important;
-}
 #show-icons {
   position: relative;
   top: -10px;
