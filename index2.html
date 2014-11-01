@@ -15,6 +15,9 @@
 		body {
 			padding-top: 76px;
 			padding-bottom: 20px;
+      background-color: #eee;
+      background-image: url('img/background.png');
+      background-attachment: fixed;
 		}
 		.center {
 			text-align: center;
@@ -26,6 +29,14 @@
       width: 64px;
       height: 64px;
       margin: auto;
+    }
+    .popular {
+      width: 36px;
+      height: 36px;
+      float: left;
+      position: relative;
+      left: 12px;
+      top: 3px;
     }
     .panel-heading {
       border-bottom: 2px solid #df0051 !important;
@@ -64,6 +75,16 @@
           </div>
           <div class="panel-body">
             <div class="row">
+              <div class="col-md-12">
+                <div class="well">
+                  <h4 style="float: left;">Popular:</h4>
+                  <ul class="nav nav-pills">
+                    <li ng-repeat="link in popular" class="icon-box">
+                      <div class="popular icon icon-{{ link.icon }}"></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
               <div class="col-md-12" data-ng-repeat="section in sections">
                 <h3>{{ section.name }}</h3>
                 <div class="row">

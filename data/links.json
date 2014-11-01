@@ -5,12 +5,14 @@
       { 
         "name": "Wiki", 
         "href": "https://wiki.csh.rit.edu", 
-        "icon": "wiki" 
+        "icon": "wiki",
+        "popular": true
       },
       { 
         "name": "Member Profiles", 
         "href": "https://members.csh.rit.edu/profiles", 
-        "icon": "profiles" 
+        "icon": "profiles",
+        "popular": true
       },
       { 
         "name": "Event Calendar",
@@ -28,7 +30,8 @@
             "href": "http://www.google.com/calendar/ical/rti648k5hv7j3ae3a3rum8potk%40group.calendar.google.com/public/basic.ics"
           }
         ],
-        "icon": "calendar"
+        "icon": "events",
+        "popular": true
       },
       {
         "name": "Floor Map",
@@ -105,17 +108,20 @@
       {
         "name": "WebDrink",
         "href": "https://webdrink.csh.rit.edu",
-        "icon": "drink"
+        "icon": "drink",
+        "popular": true
       },
       {
         "name": "WebNews",
         "href": "https://webnews.csh.rit.edu",
-        "icon": "webnews"
+        "icon": "webnews",
+        "popular": true
       },
       {
         "name": "Roundcube Webmail",
         "href": "https://roundcube.csh.rit.edu",
-        "icon": "webmail"
+        "icon": "webmail",
+        "popular": true
       },
       {
         "name": "Mailing Lists",
@@ -256,7 +262,7 @@
       {
         "name": "PostgreSQL Admin",
         "href": "https://webpgsql.csh.rit.edu",
-        "icon": "postresql"
+        "icon": "postgresql"
       },       
       {
         "name": "Network Info",
