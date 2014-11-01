@@ -18,6 +18,7 @@ app.directive("meetings", function() {
 });
 
 app.controller("MembersController", ['$scope', '$http', function($scope, $http) {
+
   // Get the meeting times
   $scope.meetings = [];
   $http.get("./data/meetings.json").success(function (response) {
@@ -25,24 +26,45 @@ app.controller("MembersController", ['$scope', '$http', function($scope, $http) 
   }).error(function (error) {
     console.error("Error getting meetings.json");
   });
+
   // Get all the links
   $scope.sections = [];
   $scope.popular = [];
   $http.get("./data/links.json").success(function (response) {
     $scope.sections = response;
     // Find the popular links
-    for (var i = 0; i < $scope.sections.length; i++) {
-      var section = $scope.sections[i]; 
-      for (var j = 0; j < section.links.length; j++ ) {
-        if (section.links[j].hasOwnProperty("popular")) {
-          $scope.popular.push(section.links[j]);
-        }
-      }
-    }
-    if ($scope.popular.length == 0) $scope.popular = false;
+    // for (var i = 0; i < $scope.sections.length; i++) {
+    //   var section = $scope.sections[i]; 
+    //   for (var j = 0; j < section.links.length; j++ ) {
+    //     if (section.links[j].hasOwnProperty("popular")) {
+    //       $scope.popular.push(section.links[j]);
+    //     }
+    //   }
+    // }
+    if ($scope.popular.length === 0) $scope.popular = false;
   }).error(function (error) {
     console.error("Error getting links.json");
   });
+
   // Show/hide icons
   $scope.showIcons = true;
+  if (window.localStorage) {
+    var showIcons = window.localStorage.getItem("showIcons");
+    if (showIcons === "false") {
+      $scope.showIcons = false;
+    }
+    else if (showIcons === "true") {
+      $scope.showIcons = true;
+    }
+    else {
+      $scope.showIcons = true;
+      $scope.saveIconSetting();
+    }
+  }
+
+  // Toggle showing the icons
+  $scope.saveIconSetting = function() {
+    window.localStorage.setItem("showIcons", $scope.showIcons);
+  };
+
 }]);
