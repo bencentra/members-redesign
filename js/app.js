@@ -19,6 +19,11 @@ app.directive("meetings", function() {
 
 app.controller("MembersController", ['$scope', '$http', function($scope, $http) {
 
+  // Toggle showing the icons
+  $scope.saveIconSetting = function() {
+    window.localStorage.setItem("showIcons", $scope.showIcons);
+  };
+
   // Get the meeting times
   $scope.meetings = [];
   $http.get("./data/meetings.json").success(function (response) {
@@ -61,10 +66,5 @@ app.controller("MembersController", ['$scope', '$http', function($scope, $http) 
       $scope.saveIconSetting();
     }
   }
-
-  // Toggle showing the icons
-  $scope.saveIconSetting = function() {
-    window.localStorage.setItem("showIcons", $scope.showIcons);
-  };
 
 }]);
