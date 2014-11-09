@@ -28,3 +28,7 @@ body {
   position: relative;
   top: -10px;
 }
+/* Decreasing panel-heading padding for mobile devices */
+.panel-heading {
+  padding: 10px;
+}
