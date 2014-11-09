@@ -16,6 +16,9 @@ body {
   height: 48px;
   margin: auto;
 }
+.popular-body {
+  padding-top: 0;
+}
 .popular-list {
   background-color: #eee;
 }
