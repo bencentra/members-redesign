@@ -16,6 +16,15 @@ body {
   height: 48px;
   margin: auto;
 }
+.popular-list {
+  background-color: #eee;
+}
+.popular-list div a {
+  background-color: #ddd;
+}
+.popular-title {
+  margin-right: 20px;
+}
 .popular {
   width: 36px;
   height: 36px;

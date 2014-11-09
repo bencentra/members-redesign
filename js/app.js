@@ -38,14 +38,14 @@ app.controller("MembersController", ['$scope', '$http', function($scope, $http) 
   $http.get("./data/links.json").success(function (response) {
     $scope.sections = response;
     // Find the popular links
-    // for (var i = 0; i < $scope.sections.length; i++) {
-    //   var section = $scope.sections[i]; 
-    //   for (var j = 0; j < section.links.length; j++ ) {
-    //     if (section.links[j].hasOwnProperty("popular")) {
-    //       $scope.popular.push(section.links[j]);
-    //     }
-    //   }
-    // }
+    for (var i = 0; i < $scope.sections.length; i++) {
+      var section = $scope.sections[i]; 
+      for (var j = 0; j < section.links.length; j++ ) {
+        if (section.links[j].hasOwnProperty("popular")) {
+          $scope.popular.push(section.links[j]);
+        }
+      }
+    }
     if ($scope.popular.length === 0) $scope.popular = false;
   }).error(function (error) {
     console.error("Error getting links.json");
