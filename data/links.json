@@ -3,19 +3,19 @@
     "name": "Info", 
     "links": [
       { 
-        "name": "Wiki", 
+        "name": "Wiki",
         "href": "https://wiki.csh.rit.edu", 
         "icon": "wiki",
         "popular": true
       },
       { 
-        "name": "Member Profiles", 
+        "name": "Profiles", 
         "href": "https://members.csh.rit.edu/profiles", 
         "icon": "profiles",
         "popular": true
       },
       { 
-        "name": "Event Calendar",
+        "name": "Events",
         "dropdown": [
           {
             "name": "Calendar",
@@ -49,9 +49,9 @@
         "icon": "spending"
       },
       {
-        "name": "Sports",
-        "href": "https://sports.csh.rit.edu",
-        "icon": "sports"
+        "name": "Alumni Map",
+        "href": "https://members.csh.rit.edu/~bencentra/csh-map",
+        "icon": "world"
       }
     ] 
   },
@@ -144,7 +144,7 @@
         "icon": "machines"
       },
       {
-        "name": "Microsoft DreamSpark",
+        "name": "DreamSpark",
         "dropdown": [
           {
             "name": "DreamSpark",
@@ -158,7 +158,7 @@
         "icon": "microsoft"
       },
       {
-        "name": "Chinese Food Portal",
+        "name": "Food Portal",
         "href": "https://members.csh.rit.edu/~mcg1sean/food/",
         "icon": "food"
       },
@@ -240,7 +240,7 @@
     "name": "Sysadmin",
     "links": [
       {
-        "name": "CA Certificate",
+        "name": "CA Cert",
         "href": "http://www.csh.rit.edu/resources/CA-Certificate.crt",
         "icon": "certificate"
       },      

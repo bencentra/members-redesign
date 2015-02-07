@@ -40,6 +40,19 @@ body {
   position: relative;
   top: -10px;
 }
+.section-title {
+  margin: 12px 0 18px 0;
+}
+.logo {
+  width: 48px;
+  height: 46px;
+}
+.navbar-brand .logo {
+  width: 24px;
+  height: 23px;
+  position: relative;
+  top: -2px;
+}
 /* Decreasing panel-heading padding for mobile devices */
 .panel-heading {
   padding: 10px;

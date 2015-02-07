@@ -42,20 +42,8 @@
           </div>
           <div class="panel-body popular-body">
             <div class="row">
-              <!-- <div class="col-md-12 popular-list" ng-hide="!popular">
-                <div class="row">
-                  <div class="col-md-1 col-sm-1 col-xs-2 popular-title">
-                    <h4>Popular</h4>
-                  </div>
-                  <div class="col-md-1 col-sm-1 col-xs-1" ng-repeat="link in popular">
-                    <a href="{{ link.href || link.dropdown[0].href }}">
-                      <div class="popular icon icon-{{ link.icon }}"></div>
-                    </a>
-                  </div>
-                </div>
-              </div> -->
               <div class="col-md-12" data-ng-repeat="section in sections">
-                <h3>{{ section.name }}</h3>
+                <h3 class="section-title">{{ section.name }}</h3>
                 <div class="row">
                   <div class="col-md-3 col-sm-3 col-xs-6" data-ng-repeat="link in section.links" ng-class="(showIcons ? 'center' : '')  ">
                     <div data-ng-show="link.href">
