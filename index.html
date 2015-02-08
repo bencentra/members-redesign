@@ -48,7 +48,7 @@
                   <div class="col-md-3 col-sm-3 col-xs-6" data-ng-repeat="link in section.links" ng-class="(showIcons ? 'center' : '')  ">
                     <div data-ng-show="link.href">
                       <a href="{{ link.href }}" class="icon-box">
-                        <div ng-show="showIcons" class="icon icon-{{ link.icon }}"></div>
+                        <div ng-show="showIcons && link.icon" class="icon icon-{{ link.icon }}"></div>
                         <p>{{ link.name }}<p>
                       </a>
                     </div>

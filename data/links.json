@@ -270,5 +270,34 @@
         "icon": "network"
       }
     ]
+  },
+  {
+    "name": "Docs and Misc",
+    "links": [
+      {
+        "name": "CSH Code of Conduct",
+        "href": "https://members.csh.rit.edu/~cshouse/coc.htm"
+      },
+      {
+        "name": "RIT Code of Conduct",
+        "href": "http://www.rit.edu/computerconduct/"
+      },
+      {
+        "name": "History Archives",
+        "href": "https://members.csh.rit.edu/history/"
+      },
+      {
+        "name": "SIH Standards",
+        "href": "https://members.csh.rit.edu/docs/standards.htm"
+      },
+      {
+        "name": "RIT Service Interruptions",
+        "href": "http://www.rit.edu/fa/facilities/content/service-interruptions"
+      },
+      {
+        "name": "CSH Floor Plan",
+        "href": "https://facilities.rit.edu/campus/floorplans/buildings/043/3.pdf"
+      }
+    ]
   }
 ]
