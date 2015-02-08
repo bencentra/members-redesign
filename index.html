@@ -45,16 +45,16 @@
               <div class="col-md-12 popular">
                 <div class="row">
                   <div class="col-md-2 col-sm-4 col-xs-6 center" data-ng-repeat="link in popular">
-                    <div data-ng-show="link.href">
+                    <div data-ng-show="link.href" class="popular-box">
                       <a href="{{ link.href }}" class="icon-box">
                         <div class="icon icon-{{ link.icon }}"></div>
-                        <p>{{ link.name }}</p>
+                        <span>{{ link.name }}</span>
                       </a>
                     </div>
-                    <div data-ng-show="link.dropdown" class="dropdown">
+                    <div data-ng-show="link.dropdown" class="dropdown popular-box">
                       <a href="#" data-toggle="dropdown" class="icon-box" id="{{ link.icon }}">
                         <div class="icon icon-{{ link.icon }}"></div>
-                        <p>{{ link.name }}</p>
+                        <span>{{ link.name }}</span>
                       </a>
                       <ul class="dropdown-menu" role="menu" aria-labelledby="{{ link.icon }}">
                         <li data-ng-repeat="sub in link.dropdown">

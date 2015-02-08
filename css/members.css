@@ -16,23 +16,35 @@ body {
   height: 48px;
   margin: auto;
 }
-.popular-body {
-  padding-top: 0;
+/*.popular-box {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background: #f5f5f5;
+  padding: 3px;
+  margin: 6px 0;
+}*/
+.popular-box {
+  border-radius: 5px;
+  background: #f5f5f5;
+  padding: 3px;
+  margin: 6px 0;
 }
-.popular-list {
-  background-color: #eee;
-}
-.popular-list div a {
-  background-color: #ddd;
-}
-.popular-title {
-  margin-right: 20px;
+.popular-box:hover {
+  background: #ddd;
 }
 .popular {
   position: relative;
   top: -15px;
-  border-bottom: 1px solid #ddd;
   padding-top: 15px;
+/*  padding-bottom: 15px;
+border-bottom: 1px solid #ddd;*/
+}
+.popular .row {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 3px;
+  padding: 6px 0px;
+  background: #f5f5f5;
 }
 .popular .icon {
   width: 36px;
