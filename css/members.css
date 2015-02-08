@@ -29,12 +29,14 @@ body {
   margin-right: 20px;
 }
 .popular {
+  position: relative;
+  top: -15px;
+  border-bottom: 1px solid #ddd;
+  padding-top: 15px;
+}
+.popular .icon {
   width: 36px;
   height: 36px;
-  float: left;
-  position: relative;
-  left: 12px;
-  top: 3px;
 }
 #show-icons {
   position: relative;
@@ -52,6 +54,7 @@ body {
   height: 23px;
   position: relative;
   top: -2px;
+  display: inline;
 }
 /* Decreasing panel-heading padding for mobile devices */
 .panel-heading {
