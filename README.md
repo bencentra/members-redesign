@@ -40,8 +40,8 @@ Some entries may link to multiple sites. Here's how to add a link with a dropdow
 ```javascript
 [
   	{ 
-    	"name": "Info", // Section name
-    	"links": [ // Array of links
+    	"name": "Info",
+    	"links": [
     		...
         	{ 
 		        "name": "Events",
