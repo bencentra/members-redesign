@@ -8,20 +8,21 @@ CSHers can view a demo running here: https://members.csh.rit.edu/~bencentra/memb
 Updating Links
 --------------
 
-Instead of updating the markup directly when adding a new link, just edit `data/links.json`.
+Instead of updating the markup directly, the "Members Resources" section is generated using data from `data/links.json`.
 
 Here's what a normal link looks like:
 
-```json
+```javascript
 [
   	{ 
-    	"name": "Info", 
+    	"name": "Info",
     	"links": [
     		...
         	{
         		"name": "Wiki",
-        		"href": "https://wiki.csh.rit.edu", 
-        		"icon": "wiki"
+        		"href": "https://wiki.csh.rit.edu",
+        		"icon": "wiki",
+        		"popular": true
         	},
         	...
     	]
@@ -30,15 +31,17 @@ Here's what a normal link looks like:
 ]
 ```
 
-To have the link appear in the "popular" section, add `"popular": true` to the link object in `links.json`.
+The "icon" property maps to the icon's class name from `members-icons`. For example, "wiki" becomes `.icon-wiki`.
+
+The "popular" property is optional. If included and set to `true`, the link will appear in the Popular section.
 
 Some entries may link to multiple sites. Here's how to add a link with a dropdown:
 
-```json
+```javascript
 [
   	{ 
-    	"name": "Info", 
-    	"links": [
+    	"name": "Info", // Section name
+    	"links": [ // Array of links
     		...
         	{ 
 		        "name": "Events",
@@ -63,6 +66,21 @@ Some entries may link to multiple sites. Here's how to add a link with a dropdow
   	},
   	...
 ]
+```
+
+Updating Meetings
+-----------------
+
+Like links, meetings are generated from the `data/meetings.json` file. A meeting entry looks like this:
+
+```javascript
+[
+  { 
+    "name": "House", 
+    "day": "SUN", 
+    "time": "7:00" 
+  },
+  ...
 ```
 
 Using Grunt
